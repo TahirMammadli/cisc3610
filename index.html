@@ -1,144 +1,15 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Canvas Example</title>
-    <style>
-      #canvas {
-        background-color: skyblue;
-      }
-      #ground {
-        fill: green;
-      }
-      .house {
-        fill: brown;
-        stroke: black;
-        stroke-width: 5;
-      }
-      .chimney {
-        fill: red;
-        stroke: black;
-        stroke-width: 5;
-      }
-      .window {
-        fill: white;
-        stroke: black;
-        stroke-width: 5;
-      }
-      .grass {
-        fill: green;
-      }
-      .rock {
-        fill: gray;
-      }
-      .fence {
-        fill: brown;
-        stroke: black;
-        stroke-width: 2;
-      }
-      .ladder {
-        fill: brown;
-      }
-      .sun {
-        fill: yellow;
-      }
-      h1{
-        color: black
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="canvas" width="800" height="600">   
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>My portfolio page</h1>
+  <a href="cartoon.html">link</a>
+  <h1><a href="https://tahirmammadli.github.io/cisc3610/">Link to the cartoon page</a></h1>
 
-    </canvas>
-    <h1 id="sometext">Some Text</h1>
-    <script>
-      var canvas = document.getElementById("canvas");
-      var context = canvas.getContext("2d");
-      var text = document.getElementById("sometext");
-      // Draw text
-      context.font = "30px Arial";
-      context.fillStyle = "black";
-      context.fillText("Some text", canvas.width * 0.1, canvas.height * 0.1);
-
-      // Draw background elements
-      context.fillStyle = "skyblue";
-      context.fillRect(0, 0, canvas.width, canvas.height * 0.6);
-
-      context.fillStyle = "blue";
-      context.fillRect(0, canvas.height * 0.6, canvas.width, canvas.height * 0.4);
-
-      context.fillStyle = "green";
-      context.beginPath();
-      context.moveTo(0, canvas.height * 0.6);
-      context.lineTo(canvas.width * 0.2, canvas.height * 0.5);
-      context.lineTo(canvas.width * 0.4, canvas.height * 0.7);
-      context.lineTo(canvas.width * 0.6, canvas.height * 0.6);
-      context.lineTo(canvas.width * 0.8, canvas.height * 0.7);
-      context.lineTo(canvas.width, canvas.height * 0.5);
-      context.lineTo(canvas.width, canvas.height * 0.6);
-      context.lineTo(0, canvas.height * 0.6);
-      context.closePath();
-      context.fill();
-
-      // Draw mountains
-      context.fillStyle = "gray";
-      context.beginPath();
-      context.moveTo(0, canvas.height * 0.6);
-      context.lineTo(canvas.width * 0.2, canvas.height * 0.2);
-      context.lineTo(canvas.width * 0.4, canvas.height * 0.4);
-      context.lineTo(canvas.width * 0.6, canvas.height * 0.3);
-      context.lineTo(canvas.width * 0.8, canvas.height * 0.5);
-      context.lineTo(canvas.width, canvas.height * 0.2);
-      context.lineTo(canvas.width, canvas.height * 0.6);
-      context.lineTo(0, canvas.height * 0.6);
-      context.closePath();
-      context.fill();
-
-      // Draw trees
-      context.fillStyle = "green";
-      context.beginPath();
-      context.arc(canvas.width * 0.15, canvas.height * 0.5, 50, 0, 2 * Math.PI);
-      context.fill();
-
-      context.beginPath();
-      context.arc(canvas.width * 0.85, canvas.height * 0.5, 50, 0, 2 * Math.PI);
-      context.fill();
-
-      // Draw sun
-           // Draw sun
-           context.beginPath();
-      context.arc(canvas.width * 0.8, canvas.height * 0.2, 50, 0, 2 * Math.PI);
-      context.fillStyle = "yellow";
-      context.fill();
-
-      // Draw houses
-      context.fillStyle = "brown";
-      context.fillRect(canvas.width * 0.1, canvas.height * 0.4, 100, 100);
-      context.fillRect(canvas.width * 0.7, canvas.height * 0.5, 150, 150);
-
-      // Draw chimney
-      context.fillStyle = "red";
-      context.fillRect(canvas.width * 0.15, canvas.height * 0.35, 20, 30);
-      context.fillRect(canvas.width * 0.75, canvas.height * 0.45, 20, 30);
-
-      // Draw windows
-      context.fillStyle = "white";
-      context.fillRect(canvas.width * 0.125, canvas.height * 0.45, 30, 30);
-      context.fillRect(canvas.width * 0.175, canvas.height * 0.45, 30, 30);
-      context.fillRect(canvas.width * 0.725, canvas.height * 0.55, 50, 50);
-      context.fillRect(canvas.width * 0.775, canvas.height * 0.55, 50, 50);
-
-      // Draw grass
-      for (var i = 0; i < canvas.width; i += 30) {
-        context.beginPath();
-        context.moveTo(i, canvas.height * 0.6);
-        context.lineTo(i + 15, canvas.height * 0.65);
-        context.lineTo(i + 30, canvas.height * 0.6);
-        context.closePath();
-        context.fillStyle = "green";
-        context.fill();
-      }
-    </script>
-  </body>
+</body>
 </html>
-
